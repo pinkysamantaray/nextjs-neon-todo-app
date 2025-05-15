@@ -2,6 +2,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### DB:
+
+```bash
+npm i drizzle-orm
+npm i -D drizzle-kit
+npm i @neondatabase/serverless
+npm i dotenv
+```
+
+.env > DATABASE_URL=NEON_DATABASE_CONNECTION_STRING
+example : postgres://username:password@ep-cool-darkness-123456.us-east-2.aws.neon.tech/neondb
+
+Create a db.ts, Create a schema.ts, Create a drizzle.config.ts
+
+````bash
+npx drizzle-kit generate
+npx drizzle-kit push / npm run db:push
+```
+
+
 First, run the development server:
 
 ```bash
@@ -12,7 +32,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
