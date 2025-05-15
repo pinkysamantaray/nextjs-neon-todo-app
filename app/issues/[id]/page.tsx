@@ -1,55 +1,55 @@
-import { getIssue } from '@/lib/dal'
-import { formatRelativeTime } from '@/lib/utils'
-import { Priority, Status } from '@/lib/types'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import Badge from '@/app/components/ui/Badge'
-import Button from '@/app/components/ui/Button'
-import { ArrowLeftIcon, Edit2Icon } from 'lucide-react'
-import DeleteIssueButton from '../../components/DeleteIssueButton'
+import { getIssue } from '@/lib/dal';
+import { formatRelativeTime } from '@/lib/utils';
+import { Priority, Status } from '@/lib/types';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import Badge from '@/app/components/ui/Badge';
+import Button from '@/app/components/ui/Button';
+import { ArrowLeftIcon, Edit2Icon } from 'lucide-react';
+import DeleteIssueButton from '../../components/DeleteIssueButton';
 
 export default async function IssuePage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = await params
-  const issue = await getIssue(parseInt(id))
+  const { id } = await params;
+  const issue = await getIssue(parseInt(id));
 
   if (!issue) {
-    notFound()
+    notFound();
   }
 
   const { title, description, status, priority, createdAt, updatedAt, user } =
-    issue
+    issue;
 
   const getStatusLabel = (status: string) => {
     switch (status) {
       case 'backlog':
-        return 'Backlog'
+        return 'Backlog';
       case 'todo':
-        return 'Todo'
+        return 'Todo';
       case 'in_progress':
-        return 'In Progress'
+        return 'In Progress';
       case 'done':
-        return 'Done'
+        return 'Done';
       default:
-        return status
+        return status;
     }
-  }
+  };
 
   const getPriorityLabel = (priority: string) => {
     switch (priority) {
       case 'low':
-        return 'Low'
+        return 'Low';
       case 'medium':
-        return 'Medium'
+        return 'Medium';
       case 'high':
-        return 'High'
+        return 'High';
       default:
-        return priority
+        return priority;
     }
-  }
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8">
@@ -83,9 +83,7 @@ export default async function IssuePage({
           <Badge priority={priority as Priority}>
             {getPriorityLabel(priority)}
           </Badge>
-          <div className="text-sm text-gray-500">
-            Created {formatRelativeTime(new Date(createdAt))}
-          </div>
+
           {updatedAt !== createdAt && (
             <div className="text-sm text-gray-500">
               Updated {formatRelativeTime(new Date(updatedAt))}
@@ -128,5 +126,5 @@ export default async function IssuePage({
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
-import { CheckCircle2 } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { CheckCircle2 } from 'lucide-react';
+import WorkWithUS from '@/app/components/WorkWithUs';
 
 export default function FeaturesPage() {
   return (
@@ -8,8 +9,7 @@ export default function FeaturesPage() {
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold mb-4 text-white">Features</h1>
         <p className="text-xl text-gray-400">
-          Discover how Linear Clone can help you manage your projects more
-          efficiently.
+          Discover how Mode can help you manage your projects more efficiently.
         </p>
       </div>
 
@@ -39,33 +39,35 @@ export default function FeaturesPage() {
           description="Find anything instantly with our powerful search. Filter by assignee, status, priority, and more."
         />
       </div>
+
+      <WorkWithUS />
     </div>
-  )
+  );
 }
 
 function FeatureCard({
   title,
   description,
 }: {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }) {
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-gray-400">{description}</p>
     </div>
-  )
+  );
 }
 
 interface PlanCardProps {
-  title: string
-  price: string
-  description: string
-  features: string[]
-  buttonText: string
-  buttonLink: string
-  highlighted?: boolean
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  buttonText: string;
+  buttonLink: string;
+  highlighted?: boolean;
 }
 
 function PlanCard({
@@ -110,5 +112,5 @@ function PlanCard({
         {buttonText}
       </Link>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   experimental: {
@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-}
+  images: {
+    remotePatterns: [new URL('https://picsum.photos/*')],
+  },
+};
 
-export default nextConfig
+export default nextConfig;

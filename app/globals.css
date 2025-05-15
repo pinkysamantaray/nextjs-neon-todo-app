@@ -12,6 +12,13 @@
     --background: #121212;
     --foreground: #ededed;
   }
+
+  .header-background {
+    background-blend-mode: overlay;
+  }
+  .footer-background {
+    background-blend-mode: color;
+  }
 }
 
 body {
@@ -20,6 +27,15 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
+}
+
+.header-background {
+  background: url('/bg-desktop.png') no-repeat bottom right;
+}
+
+.footer-background {
+  background: url('/top-desktop.png') no-repeat bottom right;
+  background-position-y: top;
 }
 
 /* Mode-inspired custom utilities */

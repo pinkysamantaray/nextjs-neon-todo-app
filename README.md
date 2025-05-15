@@ -16,6 +16,8 @@ example : postgres://username:password@ep-cool-darkness-123456.us-east-2.aws.neo
 
 Create a db.ts, Create a schema.ts, Create a drizzle.config.ts
 
+check db on [Neon](https://console.neon.tech/app/projects)
+
 ```bash
 npx drizzle-kit generate
 npx drizzle-kit push / npm run db:push

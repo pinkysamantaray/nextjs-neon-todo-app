@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { Timestamp } from '../components/Timestamp'
-import Button from '../components/ui/Button'
+import Link from 'next/link';
+import Button from '../components/ui/Button';
+import Testimonials from '../components/Testimonials';
 
 export default async function LandingPage() {
   return (
@@ -18,24 +18,16 @@ export default async function LandingPage() {
               A minimal and elegant issue tracking tool for modern teams. Manage
               your projects with ease.
             </p>
-            <div className="mt-10">
+            <div className="my-10">
               <Link href="/signup">
                 <Button size="lg">Get Started</Button>
               </Link>
             </div>
           </div>
+
+          <Testimonials />
         </div>
       </main>
-
-      <footer className="border-t border-gray-200 dark:border-dark-border-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-            <p>
-              © <Timestamp /> Mode. Built for Next.js Fundamentals.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }

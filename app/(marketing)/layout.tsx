@@ -12,7 +12,7 @@ export default async function MarketingLayout({
 }) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b border-gray-200 dark:border-dark-border-subtle bg-white dark:bg-dark-base">
+      <header className="bg-white dark:bg-dark-base header-background">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-8">
             <Link href="/" className="text-xl font-bold">
@@ -60,12 +60,12 @@ export default async function MarketingLayout({
 
       <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-gray-200 dark:border-dark-border-subtle bg-white dark:bg-dark-base">
+      <footer className="border-t border-gray-200 dark:border-dark-border-subtle bg-white dark:bg-dark-base footer-background">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div>
               <h3 className="text-lg font-semibold mb-4">Mode</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-800 dark:text-gray-100">
                 A modern project management tool built with Next.js.
               </p>
             </div>
@@ -75,7 +75,7 @@ export default async function MarketingLayout({
                 <li>
                   <Link
                     href="/features"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     Features
                   </Link>
@@ -83,7 +83,7 @@ export default async function MarketingLayout({
                 <li>
                   <Link
                     href="/pricing"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     Pricing
                   </Link>
@@ -91,7 +91,7 @@ export default async function MarketingLayout({
                 <li>
                   <Link
                     href="/faq"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     FAQ
                   </Link>
@@ -104,7 +104,7 @@ export default async function MarketingLayout({
                 <li>
                   <Link
                     href="/docs"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     Documentation
                   </Link>
@@ -114,7 +114,7 @@ export default async function MarketingLayout({
                     href="https://github.com/pinkysamantaray/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     GitHub
                   </a>
@@ -127,7 +127,7 @@ export default async function MarketingLayout({
                 <li>
                   <Link
                     href="/terms"
-                    className="text-sm text-gray-600 hover:text-purple-600"
+                    className="text-sm text-gray-800 dark:text-gray-100 hover:text-purple-600"
                   >
                     Terms of Service
                   </Link>
@@ -135,8 +135,8 @@ export default async function MarketingLayout({
               </ul>
             </div>
           </div>
-          <div className="mt-8 border-t pt-8 text-center">
-            <p className="text-sm text-gray-600">
+          <div className="mt-8 pt-8 text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               &copy; <Timestamp /> Mode. All rights reserved.
             </p>
           </div>
