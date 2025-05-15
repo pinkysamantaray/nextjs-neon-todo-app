@@ -1,7 +1,7 @@
 {
   "name": "nextjs-neon-todo-app",
   "version": "0.1.0",
-  "description": "A simple todo app built with Next.js, Neon database, and Drizzle ORM(postgresql).",
+  "description": "A simple todo app built with Next.js, tailwindcss, Neon database, and Drizzle ORM(postgresql).",
   "author": "Pinky Samantaray",
   "private": true,
   "scripts": {

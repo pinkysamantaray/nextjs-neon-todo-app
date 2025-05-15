@@ -16,18 +16,17 @@ example : postgres://username:password@ep-cool-darkness-123456.us-east-2.aws.neo
 
 Create a db.ts, Create a schema.ts, Create a drizzle.config.ts
 
-````bash
+```bash
 npx drizzle-kit generate
 npx drizzle-kit push / npm run db:push
 ```
-
 
 First, run the development server:
 
 ```bash
 npm run dev
 npm run build
-````
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
